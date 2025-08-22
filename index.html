@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CHANGE ME</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Epic Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pirata One&effect=neon">
+    <style>
+      body {
+      font-family: "Pirata One", sans-serif;
+      font-size: 30px;
+    }
+    .custom-red-neon {
+  color: #000000;
+  text-shadow:
+    0 0 5px #ff3131,
+    0 0 10px #ff3131,
+    0 0 20px #ff3131,
+    0 0 40px #fe0000;
+}
+</style>
   </head>
 
-  <body>
+  <body class="font-effect-neon custom-red-neon">
+    
     <!-- All content goes here -->
     <div id="all-contents">
-      
+      <nav>
+        <h1>Koen Hill's Epic Website</h1>
+        <ul id="nav-ul">
+          <li class="nav-li">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-li">
+            <a href="portfolio.html">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <div class="sidebar">
+          <img class="sidebar-img" src="assets/raphael.jpg">
+        </div>
+
+        <div class="content">
+          <h2>Koen Hill</h2>
+          <p>Student at Covington High</p>
+          <div id="interest">
+            <h3>Interest</h3>
+            <ul>
+              <li>Listening to Music</li>
+              <li>Staying Active</li>
+              <li>Watching Movies</li>
+            </ul>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
