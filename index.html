@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Epic Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Doto&effect=neon">
@@ -11,99 +11,61 @@
       font-family: "Doto", sans-serif;
       font-size: 30px;
       }
-</style>
+    </style>
   </head>
   <body>
-    <script src="script.js"></script>
-    <audio controls autoplay loop style="display: none;">
-      <source src="assets/8-Bit Fantasy & Adventure Music.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <!-- All content goes here -->
-    <div id="all-contents">
-      <nav>
+    <script src="script.js" defer></script>
+    <div class="title">
         <h1>Koen Hill's Epic Website</h1>
-        <ul id="nav-ul">
-          <li class="nav-li">
-            <a href="index.html"><button class="button-54" role="button" ><strong>Home</strong></button></a>
-          </li>
-          <li class="nav-li">
-            <a href="portfolio.html"><button class="button-54" role="button"><strong>Portfolio</strong></button></a>
-          </li>
-          <li class="nav-li">
-            <a href="games.html"><button class="button-54" role="button"><strong>Games</strong></button></a>
-          </li>
-        </ul>
-      </nav>
-
-      <main>
-        <div class="sidebar">
-          <img class="sidebar-img" src="assets/raphael.jpg">
-        </div>
-
-        <div class="content">
-          <h2>Koen Hill</h2>
-          <p><strong>Student at Covington High</strong></p>
-          <div id="interest">
-            <h3>Interest:</h3>
-            <ul>
-              <li><strong>Listening to Music</strong></li>
-              <li><strong>Staying Active</strong></li>
-              <li><strong>Watching Movies</strong></li>
-            </ul>
-          </div>
-        </div>
-      </main>
-      <main>
-      <div class="left-block">
-        <div class="colors">
-          <button type="button" value="#0000ff"></button>
-          <button type="button" value="#009fff"></button>
-          <button type="button" value="#0fffff"></button>
-          <button type="button" value="#bfffff"></button>
-          <button type="button" value="#000000"></button>
-          <button type="button" value="#333333"></button>
-          <button type="button" value="#666666"></button>
-          <button type="button" value="#999999"></button>
-          <button type="button" value="#ffcc66"></button>
-          <button type="button" value="#ffcc00"></button>
-          <button type="button" value="#ffff00"></button>
-          <button type="button" value="#ffff99"></button>
-          <button type="button" value="#003300"></button>
-          <button type="button" value="#555000"></button>
-          <button type="button" value="#00ff00"></button>
-          <button type="button" value="#99ff99"></button>
-          <button type="button" value="#f00000"></button>
-          <button type="button" value="#ff6600"></button>
-          <button type="button" value="#ff9933"></button>
-          <button type="button" value="#f5deb3"></button>
-          <button type="button" value="#330000"></button>
-          <button type="button" value="#663300"></button>
-          <button type="button" value="#cc6600"></button>
-          <button type="button" value="#deb887"></button>
-          <button type="button" value="#aa0fff"></button>
-          <button type="button" value="#cc66cc"></button>
-          <button type="button" value="#ff66ff"></button>
-          <button type="button" value="#ff99ff"></button>
-          <button type="button" value="#e8c4e8"></button>
-          <button type="button" value="#ffffff"></button>
-        </div>
-        <div class="brushes">
-          <button type="button" value="1"></button>
-          <button type="button" value="2"></button>
-          <button type="button" value="3"></button>
-          <button type="button" value="4"></button>
-          <button type="button" value="5"></button>
-        </div>
-        <div class="buttons">
-          <button id="clear" type="button">Clear</button>
-          <button id="save" type="button">Save</button>
-        </div>
-      </div>
-      <div class="right-block">
-        <canvas id="paint-canvas" width="640" height="400"></canvas>
-      </div>
-    </main>
     </div>
-  </body>
+            <!-- From Uiverse.io by Creatlydev --> 
+    <nav>
+      <ul id="nav-ul">
+        <li class="nav-li">
+          <a href="index.html"><button class="button-54" role="button" ><strong>Home</strong></button></a>
+        </li>
+        <li class="nav-li">
+          <a href="portfolio.html"><button class="button-54" role="button"><strong>Portfolio</strong></button></a>
+        </li>
+        <li class="nav-li">
+          <a href="https://github.com/KBHILL/KBHILL.github.io" target="_blank"><button class="button-54" role="button"><strong>Github</strong></button></a>
+        </li>
+        <li class="nav-li">
+          <a href="games.html"><button class="button-54" role="button"><strong>Games</strong></button></a>
+        </li>
+        <li class="nav-li">
+          <a href="images.html"><button class="button-54" role="button"><strong>Gallery</strong></button></a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-content">
+        <h2>Welcome to my epic website!</h2>
+        <strong>
+          <p>This is a website made by the most excellent, Koen Hill.</p>
+          <p>This website has been coded exclusively for learning HTML, CSS, and JavaScript.</p>
+          <p>is also a portfolio for my projects.</p>
+          <p>Feel free to explore the different pages and check out my work!</p>
+          <p>Click the buttons in the navigation bar to go to different pages.</p>
+          <p>Enjoy your visit!</p>
+        </strong>
+    </main>
+
+    <div id="interest">
+      <h2>Interests / Fascinations:</h2>
+      <p id="interest-margin"><strong>Some of my interests and fascinations include:</strong></p>
+      <div class="image-container">
+        <img src="assets/nature la.jpg" alt="Descriptive Text">
+        <div class="text-label"><strong>Nature</strong></div>
+      </div>
+      <div class="image-container">
+        <img src="assets/tokyo.jpg" alt="Descriptive Text">
+        <div class="text-label"><strong>Travel</strong></div>
+      </div>
+      <div class="image-container">
+        <img src="assets/def leppard logo.jpg" alt="Descriptive Text">
+        <div class="text-label"><strong>Music</strong></div>
+      </div>
+    </div>
+    
+</body>
 </html>

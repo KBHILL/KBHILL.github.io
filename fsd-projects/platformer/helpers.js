@@ -122,9 +122,6 @@ function changeAnimationType() {
   }
 }
 
-// Allows tracking of double jump state
-player.jumpCount = 0;
-player.maxJumps = 2;
 
 
 function debug() {
@@ -271,7 +268,6 @@ function collision() {
       );
     }
   }
-  player.jumpCount = 0;
   return result;
 }
 
@@ -369,14 +365,14 @@ function projectileCollision() {
 }
 
 function deathOfPlayer() {
-  ctx.fillStyle = "grey";
+  ctx.fillStyle = "black";
   ctx.fillRect(
     canvas.width / 4,
     canvas.height / 6,
     canvas.width / 2,
     canvas.height / 2
   );
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "white";
   ctx.font = "800% serif";
   ctx.fillText(
     "You are dead",
@@ -393,7 +389,7 @@ function deathOfPlayer() {
   );
   if (keyPress.any) {
     keyPress.any = false;
-    window.location.reload();
+    window.location.reload(true);
   }
 }
 
@@ -746,18 +742,12 @@ function keyboardControlActions() {
     player.facingRight = true;
   }
   if (keyPress.space || keyPress.up) {
-    if (
-        // allow jump if on ground or have double jump left
-        player.onGround || player.jumpCount < player.maxJumps - 1
-    ) {
-        player.speedY = player.speedY - playerJumpStrength;
-        jumpTimer = 19;
-        player.onGround = false;
-        frameIndex = 4;
-        player.jumpCount++;
-        // Prevent holding key for auto double jump
-        keyPress.space = false;
-        keyPress.up = false;
+    if (player.onGround) {
+      //this only lets you jump if you are on the ground
+      player.speedY = player.speedY - playerJumpStrength;
+      jumpTimer = 19; //this counts how many frames to have the jump last.
+      player.onGround = false; //bug fix for jump animation, you have to change this or the jump animation doesn't work
+      frameIndex = 4;
     }
   }
 }
