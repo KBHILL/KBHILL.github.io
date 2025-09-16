@@ -70,11 +70,14 @@ body {
     padding: 0.25em 0.75em; 
 } 
 
+/*Navigation Styling*/
 nav {
     width: fit-content;           
     margin: 10px auto 0;
+    
     padding: 5px; 
     border: 4px solid rgb(4, 24, 136);
+    
     border-radius: 50px;       
     background: white;      
     text-align: center; 
@@ -84,6 +87,7 @@ nav {
     list-style-type: none;
     margin: 0;
     display: flex;
+    
     padding: 10px;
     padding-top: 4px;
     padding-left: 2px;
@@ -94,25 +98,33 @@ nav {
     display: inline-block;
     padding: 0 10px;
 }
+/*End of Navigation Styling*/
 
+/*Main Styling*/
 #main-content {
     width: fit-content;           
     margin: 10px auto 0;
+    
     padding: 5px; 
     border: 4px solid rgb(4, 24, 136);
     border-radius: 50px;       
+
     background: white;   
     color: rgb(4, 24, 136);   
     text-align: center;
 }
+/*End of Main Styling*/
 
-#interest {
+/*About Me Styling*/
+#about-me {
     width: fit-content;           
     margin: 20px auto 20px;
     padding: 15px; 
+    
     border: 4px solid rgb(4, 24, 136);
     border-radius: 50px;       
     background: white;   
+    
     color: rgb(4, 24, 136);   
     text-align: center;
     font-display: block;
@@ -126,10 +138,11 @@ nav {
 .image-container img {
   display: block;
   width: 500px; 
+ 
   height: 400px; 
   border-radius: 50px;
 }
 
-#interest-margin {
+#about-me-margin {
     margin-bottom: 20px;
 }
