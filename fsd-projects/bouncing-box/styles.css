@@ -10,6 +10,7 @@ body {
 
     margin: 0;
     animation: 2s linear 0s infinite running RepeatingBackground;
+    user-select: none;
 }
 
 @keyframes RepeatingBackground {
@@ -55,4 +56,24 @@ body {
 .board {
     height: 100vh;
     overflow-x: hidden;
+}
+
+/*#score {
+    color: white;
+    font-family: "Slackey", sans-serif;
+
+}*/
+
+.scoreboard {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Slackey", sans-serif;
+    font-size: 20px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-style: normal;
+    margin: 0 auto;
 }

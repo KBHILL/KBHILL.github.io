@@ -13,6 +13,10 @@
   </head>
 
   <body class="board">
+    <div class="scoreboard" id="score-container">
+		  <h1>Score: <span id="score">0</span></div>
+	  </div>
+    
     <!-- HTML for the box -->
     <div class="box">?</div>
 
@@ -35,8 +39,8 @@
           boardWidth = board.width();
         });
 
-        // Every 50 milliseconds, call the update Function (see below)
-        setInterval(update, 16);
+        // Every 16 milliseconds, call the update Function (see below)
+        var interval = setInterval(update, 16);
 
         // Every time the box is clicked, call the handleBoxClick Function (see below)
         box.on("click", handleBoxClick);
@@ -61,8 +65,13 @@
         var positionX = 0;
         var points = 0;
         var speed = 3.2;
-        var positionY;
-        var speedY;
+        var positionY = 500;
+        var speedY = 0;
+        var score = 0;
+        var misclicks = 0;
+        // Score
+				var ScoreContainer = document.getElementById('score-container')
+				var ScoreCounter = document.getElementById('score')
 
 
         /**
@@ -72,14 +81,20 @@
          */
         function update() {
           positionX += speed;
+          positionY += speedY;
           moveBoxTo(positionX, positionY);
           if (positionX >= boardWidth - 100) {
             speed *= -1;
           }
-          else if (positionX <= 0) {
+           if (positionX <= 0) {
             speed *= -1;
           }
-
+          if (positionY >= boardHeight - 100) {
+            speedY *= -1;
+          }
+          if (positionY <= 0) {
+            speedY *= -1;
+          }
           
         }
 
@@ -96,8 +111,20 @@
           points++;
           speed += .96;
           speed = .96 * points + 3.2;
-
-
+          speedY += .96;
+          speedY = .96 * points + 3.2;
+          // Update score
+				  score += 1;
+          if(points % 10 === 0){
+            speedY = 10;
+            positionY = 500;
+          }
+          else {
+            speedY = 0;
+            positionY = 500;
+          }
+				  changeBoxText(score);
+				  ScoreCounter.innerHTML = score
         }
 
 
