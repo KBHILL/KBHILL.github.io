@@ -16,6 +16,10 @@
     <div class="scoreboard" id="score-container">
 		  <h1>Score: <span id="score">0</span></div>
 	  </div>
+    <div class="misclicks" class="misclicks-container">
+      <h1>Misclicks: <span id="misclick-count">0</span></div>
+    </div>
+
     
     <!-- HTML for the box -->
     <div class="box">?</div>
@@ -74,6 +78,23 @@
 				var ScoreCounter = document.getElementById('score')
 
 
+        var misclickCountDisplay = document.getElementById('misclick-count');
+
+        // Modify the board click event to update the misclick display as well
+        board.on("click", function(event) {
+          if (!jQuery(event.target).hasClass("box")) {
+            misclicks++;
+            misclickCountDisplay.innerHTML = misclicks;
+            if (misclicks >= points * 10 / points) {
+              clearInterval(interval);
+              box.off("click", handleBoxClick);
+              board.off("click");
+              changeBoxText("Game Over");
+              ScoreCounter.innerHTML = "Game Over";
+            }
+          }
+        });
+
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
@@ -106,6 +127,7 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
+          misclicks = 0;
           positionX = 0
           box.text(points);
           points++;
