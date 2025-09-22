@@ -1,5 +1,5 @@
 * {
-    cursor: url(./assets/Cherry\ Color\ Pixel\ Animated--cursor--SweezyCursors\ \(1\).png) , auto;
+    cursor: url(./assets/Black\ Pixel--cursor--SweezyCursors.png) , auto;
 }
 
 body {
@@ -7,7 +7,7 @@ body {
     background-repeat: repeat;
     background-size: 120px;
     background-position-x: 0;*/
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     margin: 0;
     /*animation: 2s linear 0s infinite running RepeatingBackground;*/
     user-select: none;
@@ -58,13 +58,25 @@ body {
     overflow-x: hidden;
 }
 
+.home {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.portfolio {
+    position: absolute;
+    top: 5px;
+    left: 85px;
+}
+
 /*#score {
     color: white;
     font-family: "Slackey", sans-serif;
 
 }*/
 
-.scoreboard {
+/*.scoreboard {
     color: rgb(0, 0, 0);
     text-align: center;
     display: flex;
@@ -76,18 +88,28 @@ body {
     -webkit-text-stroke-color: rgb(255, 255, 255);
     font-style: normal;
     margin: 0 auto;
+}*/
+
+#score-container {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 5px;
+    left: 35vw;
+    font-family: "Slackey", sans-serif;
+    font-size: 20px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-style: normal;
 }
 
 .misclicks {
     color: rgb(0, 0, 0);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 5px;
+    left: 50vw;
     font-family: "Slackey", sans-serif;
     font-size: 20px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
     font-style: normal;
-    margin: 0 auto;
 }
